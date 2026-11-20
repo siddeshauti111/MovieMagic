@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}My bookings{% endblock %}
+{% block content %}<section class="wrap section"><h1>My bookings</h1>
+{% for item in bookings %}<article class="panel history-item">
+<div><p class="meta">{{ item.booking_id }}</p><h2>{{ item.movie_name }}</h2><p>{{ item.theater }} · {{ item.show_date }} at {{ item.show_time }} IST</p><p>Seats {{ item.seats|join(', ') }} · ₹{{ item.total_amount }}</p></div>
+<a class="button outline" href="{{ url_for('ticket', booking_id=item.booking_id) }}">View ticket</a>
+</article>{% else %}<div class="panel empty"><h2>You have no bookings yet</h2><p>Your confirmed tickets will appear here.</p><a class="button" href="{{ url_for('home') }}">Explore shows</a></div>{% endfor %}
+</section>{% endblock %}

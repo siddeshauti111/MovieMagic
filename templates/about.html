@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}<section class="wrap section reading"><h1>About MovieMagic</h1><p>Explore movies and events, reserve seats, and keep your digital tickets in one place.</p><p>The catalog, theater schedules and payments are for demonstration. Times are shown in India Standard Time.</p><a class="button" href="{{ url_for('home' if g.user else 'register') }}">Explore MovieMagic</a></section>{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% from '_catalog.html' import filters, cards %}
+{% block title %}Search results{% endblock %}
+{% block content %}<section class="wrap section"><h1>Search results</h1>{{ filters(cities, city, query, genres, genre) }}
+<p>{{ movies|length }} {{ 'result' if movies|length == 1 else 'results' }} in {{ city }}{% if query %} for “{{ query }}”{% endif %}</p>
+{% if movies %}{{ cards(movies, theaters) }}{% else %}<div class="panel empty"><h2>No shows found</h2><p>Try a different title, location or genre.</p><a href="{{ url_for('home') }}">Explore all shows</a></div>{% endif %}</section>{% endblock %}

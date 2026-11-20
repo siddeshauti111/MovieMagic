@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+.aws/
+instance/
+__pycache__/
+.pytest_cache/
+*.sqlite*
+*.db
+*.db-*
+*.pem
+*.key
+*.p12
+*.pfx

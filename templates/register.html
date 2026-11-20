@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Create an account{% endblock %}
+{% block content %}<section class="auth"><div class="panel auth-card"><h1>Create an account</h1><p>Book your next movie night in minutes.</p>
+<form method="post" class="stack"><input type="hidden" name="csrf" value="{{ csrf_token() }}">
+<label>Full name<input name="name" required minlength="2" maxlength="100" autocomplete="name" value="{{ request.form.get('name', '') }}"></label>
+<label>Email address<input name="email" type="email" maxlength="254" required autocomplete="email" value="{{ request.form.get('email', '') }}"></label>
+<label>Password<input name="password" type="password" minlength="8" maxlength="128" required autocomplete="new-password"></label>
+<label>Confirm password<input name="confirm_password" type="password" minlength="8" maxlength="128" required autocomplete="new-password"></label>
+<button class="button">Create account</button></form><p>Already registered? <a href="{{ url_for('login') }}">Log in</a></p></div></section>{% endblock %}

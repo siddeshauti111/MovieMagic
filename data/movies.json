@@ -1,0 +1,424 @@
+{
+  "cities": {
+    "Pune": [
+      {
+        "id": "pune-central",
+        "name": "Magic Screens Central",
+        "address": "Senapati Bapat Road, Pune",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 240
+      },
+      {
+        "id": "pune-grand",
+        "name": "Grand Lumière",
+        "address": "Koregaon Park, Pune",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 300
+      }
+    ],
+    "Mumbai": [
+      {
+        "id": "mumbai-central",
+        "name": "Magic Screens Central",
+        "address": "Lower Parel, Mumbai",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 250
+      },
+      {
+        "id": "mumbai-grand",
+        "name": "Grand Lumière",
+        "address": "Andheri West, Mumbai",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 310
+      }
+    ],
+    "Hyderabad": [
+      {
+        "id": "hyderabad-central",
+        "name": "Magic Screens Central",
+        "address": "HITEC City, Hyderabad",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 260
+      },
+      {
+        "id": "hyderabad-grand",
+        "name": "Grand Lumière",
+        "address": "Banjara Hills, Hyderabad",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 320
+      }
+    ],
+    "Bengaluru": [
+      {
+        "id": "bengaluru-central",
+        "name": "Magic Screens Central",
+        "address": "Brigade Road, Bengaluru",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 270
+      },
+      {
+        "id": "bengaluru-grand",
+        "name": "Grand Lumière",
+        "address": "Indiranagar, Bengaluru",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 330
+      }
+    ],
+    "Delhi": [
+      {
+        "id": "delhi-central",
+        "name": "Magic Screens Central",
+        "address": "Connaught Place, Delhi",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 280
+      },
+      {
+        "id": "delhi-grand",
+        "name": "Grand Lumière",
+        "address": "Saket, Delhi",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 340
+      }
+    ],
+    "Chennai": [
+      {
+        "id": "chennai-central",
+        "name": "Magic Screens Central",
+        "address": "Anna Salai, Chennai",
+        "times": [
+          "11:30",
+          "15:15",
+          "19:30"
+        ],
+        "price": 290
+      },
+      {
+        "id": "chennai-grand",
+        "name": "Grand Lumière",
+        "address": "Velachery, Chennai",
+        "times": [
+          "13:00",
+          "17:45",
+          "21:15"
+        ],
+        "price": 350
+      }
+    ]
+  },
+  "titles": [
+    {
+      "id": "midnight-circuit",
+      "title": "Midnight Circuit",
+      "genre": "Action",
+      "language": "Hindi",
+      "duration": 126,
+      "rating": "8.8",
+      "description": "A getaway driver races across a rain-soaked city to rescue her brother.",
+      "color": "#ff5348",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi",
+        "Chennai"
+      ],
+      "poster": "images/poster-1.png"
+    },
+    {
+      "id": "the-last-monsoon",
+      "title": "The Last Monsoon",
+      "genre": "Drama",
+      "language": "Marathi",
+      "duration": 114,
+      "rating": "8.5",
+      "description": "An estranged family reunites when the rains uncover a long-buried secret.",
+      "color": "#1dada5",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi",
+        "Chennai"
+      ],
+      "poster": "images/poster-2.png"
+    },
+    {
+      "id": "paper-moons",
+      "title": "Paper Moons",
+      "genre": "Romance",
+      "language": "Hindi",
+      "duration": 119,
+      "rating": "8.2",
+      "description": "Two strangers trade letters through an old cinema's forgotten projection booth.",
+      "color": "#ed80a0",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi",
+        "Chennai"
+      ],
+      "poster": "images/poster-3.png"
+    },
+    {
+      "id": "signal-lost",
+      "title": "Signal Lost",
+      "genre": "Thriller",
+      "language": "Telugu",
+      "duration": 132,
+      "rating": "8.7",
+      "description": "A radio engineer intercepts a distress call from a town that disappeared.",
+      "color": "#face57",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi",
+        "Chennai"
+      ],
+      "poster": "images/poster-4.png"
+    },
+    {
+      "id": "a-table-for-four",
+      "title": "A Table for Four",
+      "genre": "Comedy",
+      "language": "Hindi",
+      "duration": 107,
+      "rating": "8.1",
+      "description": "Four rival chefs accidentally book the same kitchen before a live cooking final.",
+      "color": "#f18c35",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Delhi",
+        "Chennai",
+        "Pune",
+        "Mumbai"
+      ],
+      "poster": "images/poster-5.png"
+    },
+    {
+      "id": "salt-sea",
+      "title": "Salt & Sea",
+      "genre": "Drama",
+      "language": "Tamil",
+      "duration": 124,
+      "rating": "8.6",
+      "description": "A young fisher returns to a coastal village divided over its future.",
+      "color": "#57a7dc",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Chennai",
+        "Pune",
+        "Mumbai",
+        "Hyderabad"
+      ],
+      "poster": "images/poster-6.png"
+    },
+    {
+      "id": "skyline-run",
+      "title": "Skyline Run",
+      "genre": "Action",
+      "language": "Kannada",
+      "duration": 121,
+      "rating": "8.3",
+      "description": "A parkour crew takes on a rooftop chase to retrieve evidence stolen from a friend.",
+      "color": "#836efd",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru"
+      ],
+      "poster": "images/poster-7.png"
+    },
+    {
+      "id": "the-borrowed-groom",
+      "title": "The Borrowed Groom",
+      "genre": "Comedy",
+      "language": "Marathi",
+      "duration": 112,
+      "rating": "7.9",
+      "description": "A well-meaning actor takes one wedding gig too many.",
+      "color": "#ec506f",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi"
+      ],
+      "poster": "images/poster-8.png"
+    },
+    {
+      "id": "an-hour-in-june",
+      "title": "An Hour in June",
+      "genre": "Romance",
+      "language": "Bengali",
+      "duration": 104,
+      "rating": "8.0",
+      "description": "A missed train gives two former friends a chance to revisit an old promise.",
+      "color": "#dca36a",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi",
+        "Chennai"
+      ],
+      "poster": "images/poster-9.png"
+    },
+    {
+      "id": "quiet-platform",
+      "title": "Quiet Platform",
+      "genre": "Thriller",
+      "language": "Malayalam",
+      "duration": 118,
+      "rating": "8.4",
+      "description": "A night-shift attendant notices that the same passenger boards every empty train.",
+      "color": "#5885ef",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Bengaluru",
+        "Delhi",
+        "Chennai",
+        "Pune"
+      ],
+      "poster": "images/poster-10.png"
+    },
+    {
+      "id": "courtyard-stories",
+      "title": "Courtyard Stories",
+      "genre": "Drama",
+      "language": "Gujarati",
+      "duration": 116,
+      "rating": "8.2",
+      "description": "Neighbours fight to preserve the courtyard where generations grew up together.",
+      "color": "#94b661",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Delhi",
+        "Chennai",
+        "Pune",
+        "Mumbai"
+      ],
+      "poster": "images/poster-11.png"
+    },
+    {
+      "id": "fireline",
+      "title": "Fireline",
+      "genre": "Action",
+      "language": "Tamil",
+      "duration": 139,
+      "rating": "8.5",
+      "description": "A mountain rescue team faces its toughest call as a storm cuts off the only road.",
+      "color": "#f15e33",
+      "release": "Now showing",
+      "kind": "movie",
+      "cities": [
+        "Chennai",
+        "Pune",
+        "Mumbai",
+        "Hyderabad"
+      ],
+      "poster": "images/poster-12.png"
+    },
+    {
+      "id": "after-dark-live",
+      "title": "After Dark Live",
+      "genre": "Music",
+      "language": "English",
+      "duration": 90,
+      "rating": "8.4",
+      "description": "A late-night set of original indie music and cinematic visuals.",
+      "color": "#9379ff",
+      "release": "Upcoming",
+      "kind": "event",
+      "cities": [
+        "Pune",
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru"
+      ],
+      "poster": "images/poster-13.png"
+    },
+    {
+      "id": "the-friday-laugh",
+      "title": "The Friday Laugh",
+      "genre": "Stand-up",
+      "language": "Hindi",
+      "duration": 80,
+      "rating": "8.0",
+      "description": "A rotating lineup shares sharp observations and new material.",
+      "color": "#f47f54",
+      "release": "Upcoming",
+      "kind": "event",
+      "cities": [
+        "Mumbai",
+        "Hyderabad",
+        "Bengaluru",
+        "Delhi"
+      ],
+      "poster": "images/poster-14.png"
+    }
+  ]
+}

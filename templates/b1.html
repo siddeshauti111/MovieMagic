@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Choose seats{% endblock %}
+{% block scripts %}<script defer src="{{ url_for('static', filename='js/booking.js') }}"></script>{% endblock %}
+{% block content %}<section class="wrap section">
+<a class="breadcrumb" href="{{ url_for('home') }}">Explore movies</a><h1>{{ movie.title }}</h1>
+<p>{{ theater.name }} · {{ theater.address }} · ₹{{ theater.price }} per seat</p>
+<form class="booking-grid" id="booking-form" action="{{ url_for('tickets') }}" method="post" data-api="{{ url_for('seats_api') }}" data-price="{{ theater.price }}">
+<input type="hidden" name="csrf" value="{{ csrf_token() }}">
+<input type="hidden" name="movie_id" value="{{ movie.id }}">
+<input type="hidden" name="theater_id" value="{{ theater.id }}">
+<div class="panel seating"><div class="show-options">
+<label>Show date<select name="show_date" required>{% for date in dates %}<option value="{{ date }}">{{ date }}</option>{% endfor %}</select></label>
+<label>Showtime (IST)<select name="show_time" required disabled></select></label>
+</div><h2>Choose your seats</h2>
+<div class="screen">SCREEN</div>
+<div class="seatmap" aria-label="Cinema seats">
+{% for row in rows %}<div class="seat-row"><span aria-hidden="true">{{ row }}</span>{% for num in numbers %}<button type="button" class="seat" data-seat="{{ row }}{{ num }}" aria-label="Seat {{ row }}{{ num }}" aria-pressed="false" disabled>{{ num }}</button>{% endfor %}</div>{% endfor %}
+</div><p class="legend"><span>○ Available</span><span>✓ Selected</span><span>× Booked</span></p>
+<p id="seat-status" role="status">Loading seats…</p><button class="button outline" id="refresh-seats" type="button">Refresh availability</button>
+<noscript><p>Enable JavaScript to select a showtime and seats.</p></noscript>
+</div>
+<div class="panel summary"><h2>Booking summary</h2><p id="selection" aria-live="polite">No seats selected</p><div id="selected-inputs"></div>
+<div class="stack">
+<label>Customer full name<input name="customer_name" required minlength="2" maxlength="100" autocomplete="name" value="{{ g.user.name }}"></label>
+<label>Email address<input name="email" type="email" readonly required value="{{ g.user.email }}"></label>
+<label>Phone number<input name="phone" type="tel" minlength="8" maxlength="20" required autocomplete="tel"></label>
+<label>Payment method<select name="payment_method" required><option value="">Select a method</option>{% for key, label in payments.items() %}<option value="{{ key }}">{{ label }}</option>{% endfor %}</select></label>
+<p class="meta">Demo booking. No money is charged or collected online.</p>
+<div class="price-row"><span>Ticket subtotal</span><strong id="subtotal">₹0</strong></div>
+<div class="price-row"><span>Convenience charge</span><strong>₹0</strong></div>
+<div class="price-row total"><span>Total payable</span><strong id="total">₹0</strong></div>
+<button class="button" id="confirm-booking" disabled>Confirm booking</button>
+</div></div></form></section>{% endblock %}

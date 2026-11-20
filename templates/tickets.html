@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Movie ticket{% endblock %}
+{% block content %}<section class="wrap section ticket-page">
+<p class="notice success">✓ Booking confirmed</p>
+<article class="panel ticket"><div class="ticket-head"><div><p class="eyebrow">MOVIE TICKET</p><h1>{{ ticket.movie_name }}</h1><p>{{ ticket.theater }} · {{ ticket.address }}</p></div><strong>{{ ticket.booking_id }}</strong></div>
+<dl class="ticket-data">
+<dt>Show date and time</dt><dd>{{ ticket.show_date }} at {{ ticket.show_time }} IST</dd>
+<dt>Booking date</dt><dd>{{ ticket.booking_date }}</dd>
+<dt>Seats</dt><dd>{{ ticket.seats|join(', ') }}</dd>
+<dt>Customer</dt><dd>{{ ticket.customer_name }}<br>{{ ticket.email }}<br>{{ ticket.phone }}</dd>
+<dt>Total payable</dt><dd>₹{{ ticket.total_amount }}</dd>
+<dt>Total paid</dt><dd>₹{{ ticket.amount_paid }}</dd>
+<dt>Payment status</dt><dd>{{ ticket.payment_status }} · {{ ticket.payment_method }}</dd>
+<dt>Confirmation email</dt><dd>{{ notification_status[ticket.notification_status] }}</dd>
+</dl></article>
+<div class="actions print-controls"><button type="button" class="button" data-print>Print ticket</button><a class="button outline" href="{{ url_for('home') }}">Back to home</a></div>
+</section>{% endblock %}

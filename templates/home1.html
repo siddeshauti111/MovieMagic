@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% from '_catalog.html' import filters, cards %}
+{% block title %}Explore{% endblock %}
+{% block content %}<section class="catalog-hero"><div class="wrap"><p class="eyebrow">SHOWS IN {{ city|upper }}</p><h1>Welcome, {{ g.user.name }}</h1><p>Find a movie or event and pick your seats.</p></div></section>
+<div class="wrap section catalog">
+{{ filters(cities, city, query, genres, genre) }}
+{% set films = movies|selectattr('kind','equalto','movie')|list %}
+{% set events = movies|selectattr('kind','equalto','event')|list %}
+<h2>Trending movies</h2>{{ cards(films, theaters) }}
+{% if not films %}<p>No matching movies in {{ city }}.</p>{% endif %}
+<h2>Upcoming events</h2>{{ cards(events, theaters) }}
+{% if not events %}<p>No matching events in {{ city }}.</p>{% endif %}
+</div>{% endblock %}

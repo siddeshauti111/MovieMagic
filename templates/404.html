@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Request could not be completed{% endblock %}
+{% block content %}<section class="wrap section reading"><p class="eyebrow">{{ error.code }}</p><h1>{{ 'Page not found' if error.code == 404 else 'Request could not be completed' }}</h1><p>{{ error.description }}</p><a class="button" href="{{ url_for('home' if g.user else 'index') }}">Back to home</a></section>{% endblock %}

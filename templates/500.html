@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Service unavailable{% endblock %}
+{% block content %}<section class="wrap section reading"><h1>Something went wrong</h1><p>Please try again. If you just confirmed a booking, check your booking history before attempting another purchase.</p><a class="button" href="{{ url_for('bookings' if g.user else 'index') }}">{{ 'My bookings' if g.user else 'Back to home' }}</a></section>{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Your Cinema Experience{% endblock %}
+{% block content %}
+<section class="hero"><div class="wrap hero-body"><h1>Your cinema<br>experience<span>.</span></h1>
+<p>Find your next movie night. Pick a show, choose your seats and keep your ticket close.</p>
+<div class="actions"><a class="button" href="{{ url_for('home' if g.user else 'register') }}">Get started</a>{% if not g.user %}<a class="button outline" href="{{ url_for('login') }}">Log in</a>{% endif %}</div></div></section>
+<section class="wrap section"><div class="section-head"><div><p class="eyebrow">THE MOVIE GUIDE</p><h2>Now showing</h2></div><a href="{{ url_for('home' if g.user else 'login') }}">Explore movies</a></div>
+<div class="cards">{% for movie in featured %}<article class="movie"><img src="{{ url_for('static', filename=movie.poster) }}" alt="" width="360" height="520"><div class="movie-body"><p class="meta">{{ movie.genre }} · {{ movie.language }}</p><h3>{{ movie.title }}</h3><span class="rating">★ {{ movie.rating }}</span></div></article>{% endfor %}</div></section>
+<section class="wrap features"><article><h3>Find a show near you</h3><p>Browse movies and events across six Indian cities.</p></article><article><h3>Choose your seats</h3><p>Check live availability before you book.</p></article><article><h3>Take your ticket</h3><p>Open your digital ticket or print a copy.</p></article></section>
+{% endblock %}

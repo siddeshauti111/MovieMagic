@@ -1,0 +1,17 @@
+{% macro filters(cities, city, query, genres, genre) %}
+<form class="filters panel" method="get" action="{{ url_for('search') }}">
+<label>Location<select name="location">{% for item in cities %}<option{% if city == item %} selected{% endif %}>{{ item }}</option>{% endfor %}</select></label>
+<label class="search-field">Movie or event<input type="search" name="q" placeholder="Search by title" value="{{ query }}" maxlength="100"></label>
+<label>Genre<select name="genre"><option value="">All genres</option>{% for item in genres %}<option{% if genre == item %} selected{% endif %}>{{ item }}</option>{% endfor %}</select></label>
+<button class="button">Search</button></form>
+{% endmacro %}
+{% macro cards(movies, theaters) %}
+<div class="cards">
+{% for movie in movies %}<article class="movie"><div class="poster"><img loading="lazy" src="{{ url_for('static', filename=movie.poster) }}" alt="" width="360" height="520"><span class="rating">★ {{ movie.rating }}</span></div>
+<div class="movie-body"><p class="meta">{{ movie.release }} · {{ movie.genre }}</p><h3>{{ movie.title }}</h3><p class="meta">{{ movie.language }} · {{ movie.duration }} min</p><p>{{ movie.description }}</p>
+<form action="{{ url_for('booking') }}" class="stack">
+<input type="hidden" name="movie_id" value="{{ movie.id }}">
+<label>Theater and ticket price<select name="theater_id">{% for theater in theaters %}<option value="{{ theater.id }}">{{ theater.name }} · ₹{{ theater.price }}</option>{% endfor %}</select></label>
+<button class="button">Book now</button></form></div></article>{% endfor %}
+</div>
+{% endmacro %}

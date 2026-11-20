@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}MovieMagic{% endblock %} · MovieMagic</title>
+<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="{{ url_for('home' if g.user else 'index') }}"><span class="brand-icon" aria-hidden="true">▶</span>Movie<span>Magic</span></a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="navigation" type="button">Menu</button>
+<nav id="navigation" aria-label="Main navigation">
+{% if g.user %}
+<a href="{{ url_for('home') }}">Explore</a><a href="{{ url_for('bookings') }}">My Bookings</a>
+<form method="post" action="{{ url_for('logout') }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="button outline">Log out</button></form>
+{% else %}
+<a href="{{ url_for('about') }}">About</a><a href="{{ url_for('login') }}">Log in</a><a class="button" href="{{ url_for('register') }}">Create account</a>
+{% endif %}
+</nav></div></header>
+{% with notices = get_flashed_messages(with_categories=true) %}
+{% if notices %}<div class="wrap flashes">{% for category, message in notices %}<p class="notice {{ category }}" role="status">{{ message }}</p>{% endfor %}</div>{% endif %}
+{% endwith %}
+<main id="content">{% block content %}{% endblock %}</main>
+<footer class="footer"><div class="wrap footer-inner"><a class="brand" href="{{ url_for('index') }}"><span class="brand-icon" aria-hidden="true">▶</span>Movie<span>Magic</span></a><span>Demo listings</span><div><a href="{{ url_for('about') }}">About</a><a href="{{ url_for('contact') }}">Contact</a></div></div></footer>
+</body></html>
