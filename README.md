@@ -39,7 +39,7 @@ erDiagram
     BOOKINGS ||--|{ SEAT_LOCKS : reserves
 ```
 
-See [Architecture](docs/ARCHITECTURE.md) for both reference diagrams in Mermaid, the implemented data model, and the rationale for each difference.
+See [Architecture](docs/ARCHITECTURE.md) for both reference diagrams in Mermaid, the implemented data model, and the rationale for each difference, or open the [standalone ER diagram](docs/er-diagram.png).
 
 ## Project structure
 
@@ -76,7 +76,7 @@ git add .
 git status --short
 git commit -m "Build MovieMagic booking application"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/MovieMagic.git
+git remote add origin https://github.com/siddeshauti111/MovieMagic.git
 git push -u origin main
 ```
 

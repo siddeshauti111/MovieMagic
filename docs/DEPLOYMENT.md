@@ -45,7 +45,7 @@ Complete [AWS setup](AWS_SETUP.md), then create the instance in the same AWS reg
 5. Clone your GitHub repository and create the virtual environment. Use `python3.12` or `$HOME/.local/bin/python3.11` in place of `python3` for the installs above.
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/MovieMagic.git
+   git clone https://github.com/siddeshauti111/MovieMagic.git
    cd MovieMagic
    python3 -m venv .venv
    source .venv/bin/activate

@@ -3,13 +3,14 @@
 ## Entity relationship diagram, prerequisites and project flow
 
 - [x] Reference diagrams transcribed in Mermaid and reconciled with the implementation.
+- [x] Standalone ER diagram exported ([er-diagram.png](er-diagram.png)).
 - [x] Python, Git and local setup instructions documented.
 - [x] Registration-to-ticket workflow documented.
 
 ## Epic 1 · Web application development and setup
 
-- [ ] Working local application demonstrated.
-- [ ] GitHub repository URL recorded.
+- [x] Working local application demonstrated.
+- [x] GitHub repository URL recorded: `https://github.com/siddeshauti111/MovieMagic.git`.
 - [x] [Registration screenshot](screenshots/register.png).
 - [x] [Login screenshot](screenshots/login.png).
 - [x] [Dashboard screenshot](screenshots/dashboard.png).

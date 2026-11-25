@@ -104,6 +104,8 @@ erDiagram
     }
 ```
 
+![MovieMagic implemented ER diagram](er-diagram.png)
+
 ## Reconciliation
 
 | Reference detail | Implementation and rationale |
