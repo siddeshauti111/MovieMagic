@@ -96,4 +96,4 @@ The catalog uses fictional data and a rolling two-week schedule. Payments are si
 
 [Registration](docs/screenshots/register.png) · [Login](docs/screenshots/login.png) · [Dashboard](docs/screenshots/dashboard.png) · [Search](docs/screenshots/search.png) · [Seat selection](docs/screenshots/booking.png) · [Mobile booking](docs/screenshots/booking-mobile.png) · [Confirmed ticket](docs/screenshots/ticket.png)
 
-Follow the [submission checklist](docs/SUBMISSION_CHECKLIST.md) for registration, login, dashboard, search, booking, ticket and AWS evidence. The [demo script](docs/DEMO_SCRIPT.md) walks through a live demonstration. See the [project report](docs/PROJECT_REPORT.md) and [viva questions](docs/VIVA_QUESTIONS.md) for supporting material.
+See the [project report](docs/PROJECT_REPORT.md), [architecture and ER diagrams](docs/ARCHITECTURE.md), [AWS setup guide](docs/AWS_SETUP.md), [EC2 deployment guide](docs/DEPLOYMENT.md), and [testing summary](docs/TESTING.md) for supporting documentation.
